@@ -1,0 +1,28 @@
+%! Package = mlutext
+%! Author = Fachschaftsrat Mathematik/Informatik der Studierendenschaft der Martin-Luther-Universität Halle-Wittenberg
+%! Date = 2020/04/20
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mlutext}[2020/04/20 v1.0]
+
+% Font families:
+\RequirePackage{libertine} % Libertine for body text.
+\RequirePackage{eulervm} % "Euler Maths" font for maths.
+\RequirePackage[ttdefault]{sourcecodepro} % "Source Code Pro" font for monospace/code.
+\RequirePackage{microtype}\DisableLigatures{family=tt*} % Disable ligatures for monospace fonts.
+
+% Text styles:
+\newcommand{\strong}[1]{\textbf{#1}}
+\newcommand{\italic}[1]{\textit{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\Underline}[1]{\underline{\underline{#1}}} % Double underline.
+\newcommand{\plural}[1]{\textsuperscript{\underline{$#1$}}} \newcommand{\pl}[1]{\plural{#1}} % Abbreviated plural (superscript + underline) for "Lineare Algebra" lecture.
+
+% URL/link font:
+\RequirePackage{relsize}
+\newcommand{\ttsmallfont}{\ttfamily\smaller}
+\renewcommand{\UrlFont}{\ttsmallfont}
+\newcommand{\textttsmall}[1]{{\ttsmallfont #1}}
+\newcommand{\query}[1]{{\ttsmallfont #1}}
+\newcommand{\domain}[1]{\href{http://#1}{\mbox{\ttsmallfont #1}}}
+\newcommand{\email}[1]{\href{mailto:#1}{\mbox{\ttsmallfont #1}}}
